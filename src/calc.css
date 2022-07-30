@@ -1,0 +1,33 @@
+.calc {
+  border: 2px solid blue;
+  width: 145px;
+}
+
+.result {
+  margin: 10px;
+}
+
+.result input {
+  width: 118px;
+}
+
+.keyboard {
+  border: 1px solid gray;
+  margin: 10px;
+}
+
+.operations {
+  border: 1px solid gray;
+  margin: 10px;
+  width: 125px;
+}
+
+.keyboard button {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+.operations button {
+  width: 20%;
+}
