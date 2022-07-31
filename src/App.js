@@ -3,12 +3,14 @@ import './App.css';
 import {Calc} from './calc';
 import { Route, Routes } from 'react-router-dom';
 import { Main } from './Main';
+import { Translit } from './Translit';
 
 function App() {
     return <div>
         <Routes>
             <Route path='/' element={<Main />} />
             <Route path='calc' element={<Calc name="Calculator"/>} />
+            <Route path='translit' element={<Translit/>} />
         </Routes>
     </div>;
     

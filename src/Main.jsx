@@ -10,6 +10,11 @@ export const Main = () => {
           Calculator
         </Link>
       </li>
+       <li> 
+       <Link to='/translit'>
+          Translit
+        </Link>
+       </li>
     </ul>
   </div>
 };
