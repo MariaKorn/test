@@ -5,8 +5,8 @@ import CyrillicToTranslit from 'cyrillic-to-translit-js';
 
 export const Translit = () => {
   const [value, setValue] = useState('');
-  const cyrillicToTranslit = new CyrillicToTranslit();
-  cyrillicToTranslit.transform('Какая-то строка', '_').toLowerCase();
+  const [trans, setTrans] = useState('');
+
 
   return <div>
     <textarea value={value} onChange={
@@ -15,8 +15,21 @@ export const Translit = () => {
       }
     }/>
 
-    <button>
+    <button onClick={()=> {
+      const cyrillicToTranslit = new CyrillicToTranslit();
+      const result = cyrillicToTranslit.transform(value, ' ');
+      setTrans(result);
+    }}>
       Translit
     </button>
+    
+    <p>
+    {trans}
+    </p>
+    
+  
+
+    
+
   </div>
 }
