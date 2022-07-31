@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const Translit = () => {
-  return <div>
+  const [value, setValue] = useState('');
 
+  return <div>
+    <textarea value={value} onChange={
+      event=>{
+        setValue(event.target.value);
+      }
+    }/>
   </div>
 }
