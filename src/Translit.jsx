@@ -15,20 +15,25 @@ export const Translit = () => {
       }
     }/>
 
-    <button onClick={()=> {
+  <p>
+  <button onClick={()=> {
       const cyrillicToTranslit = new CyrillicToTranslit();
       const result = cyrillicToTranslit.transform(value, ' ');
       setTrans(result);
     }}>
       Translit
     </button>
+  </p>
     
+
+    <select>
+      <option value="ru_en">ru - en</option>
+      <option value="en_ru">en - ru</option>
+    </select>
+
     <p>
     {trans}
     </p>
-    
-  
-
     
 
   </div>
