@@ -18,9 +18,17 @@ export const Translit = () => {
 
   <p>
   <button onClick={()=> {
-      const cyrillicToTranslit = new CyrillicToTranslit();
-      const result = cyrillicToTranslit.transform(value, ' ');
-      setTrans(result);
+    const cyrillicToTranslit = new CyrillicToTranslit();
+    let result;
+    if (way==='ru_en') {
+      
+      result = cyrillicToTranslit.transform(value);
+      
+    }
+    else {
+      result = cyrillicToTranslit.reverse(value);
+    }
+    setTrans(result);
     }}>
       Translit
     </button>
