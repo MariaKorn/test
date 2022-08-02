@@ -6,6 +6,7 @@ import CyrillicToTranslit from 'cyrillic-to-translit-js';
 export const Translit = () => {
   const [value, setValue] = useState('');
   const [trans, setTrans] = useState('');
+  const [way, setWay] = useState('ru_en');
 
 
   return <div>
@@ -26,9 +27,13 @@ export const Translit = () => {
   </p>
     
 
-    <select>
-      <option value="ru_en">ru - en</option>
-      <option value="en_ru">en - ru</option>
+    <select onChange={
+      event=>{
+        setWay(event.target.value);
+      }
+    }>
+      <option value="ru_en" selected={way==='ru_en'}>ru - en</option>
+      <option value="en_ru" selected={way==='en_ru'}>en - ru</option>
     </select>
 
     <p>
