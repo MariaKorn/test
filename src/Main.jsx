@@ -15,6 +15,11 @@ export const Main = () => {
           Translit
         </Link>
        </li>
+       <li>
+         <Link to ='/phonebook'>
+           PhoneBook
+         </Link>
+       </li>
     </ul>
   </div>
 };
